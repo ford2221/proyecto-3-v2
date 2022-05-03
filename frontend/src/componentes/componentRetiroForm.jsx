@@ -237,7 +237,8 @@ class ComponentRetiroForm extends React.Component{
   }
 
   async consultarRetiro(id){
-    await axios.get(`http://${servidor.ipServidor}:${servidor.servidorNode.puerto}/transaccion/retiro/consultar/${id}`)
+    const token = localStorage.getItem("usuario")
+    await axios.get(`http://${servidor.ipServidor}:${servidor.servidorNode.puerto}/transaccion/retiro/consultar/${id}/${token}`)
     .then( res => {
       this.setState({
         id_retiro: this.props.match.params.id,

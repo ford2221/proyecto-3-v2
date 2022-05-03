@@ -216,7 +216,7 @@ class ComponentAsignacionRepresentanteEstudianteForm extends React.Component{
     let mensaje =""
     const token=localStorage.getItem('usuario')
     let fechaServidor=Moment(this.state.fechaServidor,"YYYY-MM-DD")
-    return await axios.get(`http://${servidor.ipServidor}:${servidor.servidorNode.puerto}/configuracion/asignacion-representante-estudiante/consultar/${id}`)
+    return await axios.get(`http://${servidor.ipServidor}:${servidor.servidorNode.puerto}/configuracion/asignacion-representante-estudiante/consultar/${id}/${token}`)
     .then( respuesta => {
       let respuesta_servidor=respuesta.data
       if(respuesta_servidor.estado_respuesta=== true){

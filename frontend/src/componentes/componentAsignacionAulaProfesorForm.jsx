@@ -236,7 +236,8 @@ class ComponentAsignacionAulaProfesorForm extends React.Component {
     }
 
     async consultarAsignacionAulaProfesor(id){
-        await axiosCustom.get(`transaccion/asignacion-aula-profesor/consultar/${id}`)
+        const token = localStorage.getItem("usuario")
+        await axiosCustom.get(`transaccion/asignacion-aula-profesor/consultar/${id}/${token}`)
         .then(respuesta => {
             let json=JSON.parse(JSON.stringify(respuesta.data))
             // console.log(json)

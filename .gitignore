@@ -3,7 +3,8 @@
 /backend/upload/cintillo/*.png
 /backend/upload/cintillo/*.jpeg
 /backend/upload/reporte/*.pdf
-/backend/modelo/driver_postgresql
+/backend/modelo/driver_postgresql.js
 /frontend/node_modules
+/frontend/src/ipServer.js
 
-backend/modelo/driver_postgresql.js
+

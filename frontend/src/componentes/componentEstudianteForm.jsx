@@ -354,7 +354,7 @@ class ComponentEstudianteForm extends React.Component{
     }
 
     async ConsultarVacunas(id_estudiante){
-
+        // const token= localStorage.getItem("usuario")
         await axios.get(`http://${servidor.ipServidor}:${servidor.servidorNode.puerto}/configuracion/vacuna_estudiante/consultar/${id_estudiante}`)
         .then( ({data}) => {
 
@@ -411,7 +411,7 @@ class ComponentEstudianteForm extends React.Component{
       const token=localStorage.getItem('usuario')
       let fechaServidor=Moment(this.state.fechaServidor,"YYYY-MM-DD")
       // /${token}
-      return await axios.get(`http://${servidor.ipServidor}:${servidor.servidorNode.puerto}/configuracion/estudiante/consultar/${id}`)
+      return await axios.get(`http://${servidor.ipServidor}:${servidor.servidorNode.puerto}/configuracion/estudiante/consultar/${id}/${token}`)
       .then(respuesta=>{
           let respuesta_servidor=respuesta.data
           console.log(respuesta_servidor)
