@@ -5,6 +5,5 @@
 /backend/upload/reporte/*.pdf
 /backend/modelo/driver_postgresql.js
 /frontend/node_modules
-/frontend/src/ipServer.js
 
 
